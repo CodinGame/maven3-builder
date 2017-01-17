@@ -1,5 +1,7 @@
 FROM openjdk:8-jdk
 
+MAINTAINER CodinGame <coders@codingame.com>
+
 ARG MAVEN_VERSION=3.3.9
 ARG USER_HOME_DIR="/root"
 
@@ -14,6 +16,6 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 COPY settings.xml $USER_HOME_DIR/.m2/
 
-WORKDIR /usr/src/codingame/maven-builder/
-COPY build.sh .
-ENTRYPOINT ["/usr/src/codingame/maven-builder/build.sh"]
+COPY ./docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
