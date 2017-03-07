@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM codingame/java-compiler
 
 MAINTAINER CodinGame <coders@codingame.com>
 
@@ -16,6 +16,8 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 COPY settings.xml $USER_HOME_DIR/.m2/
 
+COPY ./build.sh /project/build
 COPY ./docker-entrypoint.sh /
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
