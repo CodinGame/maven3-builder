@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit as soon as a command return status != 0
+set -e
+
 SRC_DIR=${1:-/project/target}
 TARGET_DIR=${2:-/project/target/jars}
 
