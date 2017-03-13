@@ -1,4 +1,4 @@
-FROM codingame/java-compiler
+FROM codingame/java-compiler:1.1
 
 MAINTAINER CodinGame <coders@codingame.com>
 
