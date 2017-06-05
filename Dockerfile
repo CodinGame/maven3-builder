@@ -1,4 +1,4 @@
-FROM techio/java-compiler:1.3
+FROM techio/java-compiler:1.4
 
 MAINTAINER CodinGame <coders@codingame.com>
 
